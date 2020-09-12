@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row row mat-elevation-z8" style="margin-top: 10px;">
+        <p-table [value]="examList"  >
+            <ng-template pTemplate="header" >
+                <tr>
+                    <th>#</th>
+                    <th>Başlık</th>
+                    <th>Tarih</th>
+                    <th> </th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-element  >
+                <tr>
+                    <td>{{element.examId}}</td>
+                    <td><p-button label="{{element.name}}" routerLink="/examList/{{element.examId}}" styleClass="p-button-link" ></p-button></td>
+                    <td>{{element.isCreatedString}}</td>
+                    <td><p-button label="Sil" styleClass="p-button-link" (click)="Delete(element.examId)"></p-button></td>
+                </tr>
+            </ng-template>
+        </p-table>
+
+        <p-toast [style]="{marginTop: '80px'}" position="bottom-right"></p-toast>
+
+        <p-confirmDialog [style]="{width: '50vw'}" [baseZIndex]="10000" key="exam"></p-confirmDialog>
+    </div>
+</div>
+

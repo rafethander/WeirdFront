@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row row mat-elevation-z8" style="margin-top: 10px;">
+
+        <div class="col-md-12" style="margin-top:10px ;">
+            {{this.topic.header}}
+        </div>
+
+        <div class="col-md-12" >
+            <div style="margin:10px 0px 10px;border-style: solid; border-color:gray; border-width: 1.5px;">
+
+                <p-scrollPanel  [style]="{'width': '100%', 'height':'200px'}">
+                    <p>
+                        {{this.topic.content}}
+                        
+                    </p>
+                </p-scrollPanel>
+            </div>
+           
+        </div>
+
+        <div class="row col-md-12" style="margin-top:10px ;" >
+            <div class="col-md-6" *ngFor="let item of this.questionsList; let i=index">
+                
+                {{item.questionSentence}}
+                
+                <div class="p-field-radiobutton">
+                    <p-radioButton name="item.questionSentence" value="item.answerA" #option1 inputId="i"></p-radioButton>
+                    <label for="{{i}}">{{item.answerA}}</label>
+                </div>
+                <div class="p-field-radiobutton">
+                    <p-radioButton name="item.questionSentence" value="item.answerB" #option2 inputId="i"></p-radioButton>
+                    <label for="{{i}}">{{item.answerB}}</label>
+                </div>
+                <div class="p-field-radiobutton">
+                    <p-radioButton name="item.questionSentence" value="item.answerC" #option2 inputId="i"></p-radioButton>
+                    <label for="{{i}}">{{item.answerC}}</label>
+                </div>
+                <div class="p-field-radiobutton">
+                    <p-radioButton name="item.questionSentence" value="item.answerD" #option4 inputId="i"></p-radioButton>
+                    <label for="{{i}}">{{item.answerD}}</label>
+                </div>
+               
+            </div>
+        </div>
+
+        
+
+        <div class="offset-8" style="margin-top:10px;">
+            <button pButton pRipple type="button" label="SINAVI TAMAMLA" class="p-button-success" [style]="{'width': '350px'}"></button>
+        </div>
+    </div>
+</div>

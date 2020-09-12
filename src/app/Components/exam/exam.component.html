@@ -1,0 +1,144 @@
+<div class="container">
+    <div class="row row mat-elevation-z8" style="margin-top: 10px;" >
+        <div class="container  col-md-12">
+            <p-dropdown [options]="topics" [(ngModel)]="selectedTopic"  placeholder='Please Choose Header...' optionLabel="header" [showClear]="true" [style]="{'width': '100%'}" (onChange)="ContentAdd($event)" ></p-dropdown>
+        </div>
+        <div class="col-md-12" >
+            <div style="margin:10px 0px 10px;border-style: solid; border-color:gray; border-width: 1.5px;">
+
+                <p-scrollPanel  [style]="{'width': '100%', 'height':'200px'}">
+                    <p>
+                        {{valueScrollPanel}}
+                        
+                    </p>
+                </p-scrollPanel>
+            </div>
+           
+        </div>
+
+        
+
+            <div class="col-md-12">
+                <input type="text" placeholder="Soru 1" pInputText #soru1 [style]="{'width': '100%', 'margin-top': '10px'}"> 
+            </div>
+            
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" placeholder="A)" pInputText #cevap11 [style]="{'width': '100%', 'margin-top': '10px'}"> 
+                    </div>
+    
+                    <div class="col-md-6">
+                        <input type="text" placeholder="B)" pInputText #cevap12 [style]="{'width': '100%', 'margin-top': '10px'}">     
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" placeholder="C)" pInputText #cevap13 [style]="{'width': '100%', 'margin-top': '10px'}"> 
+                    </div>
+    
+                    <div class="col-md-6">
+                        <input type="text" placeholder="D)" pInputText #cevap14 [style]="{'width': '100%', 'margin-top': '10px'}">     
+                    </div>
+                </div>
+                <div class="offset-4" style="margin-top:10px;">
+                    <p-dropdown [options]="options" #selectedOption1 placeholder="Select a Option"  optionLabel="name" [showClear]="true" [style]="{'width': '350px'}" ></p-dropdown>
+                </div>
+            </div>
+            
+               
+            <div class="col-md-12">
+                <input type="text" placeholder="Soru 2" pInputText #soru2 [style]="{'width': '100%', 'margin-top': '10px'}"> 
+            </div>
+            
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" placeholder="A)" pInputText #cevap21 [style]="{'width': '100%', 'margin-top': '10px'}"> 
+                    </div>
+    
+                    <div class="col-md-6">
+                        <input type="text" placeholder="B)" pInputText #cevap22 [style]="{'width': '100%', 'margin-top': '10px'}">     
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" placeholder="C)" pInputText #cevap23 [style]="{'width': '100%', 'margin-top': '10px'}"> 
+                    </div>
+    
+                    <div class="col-md-6">
+                        <input type="text" placeholder="D)" pInputText #cevap24 [style]="{'width': '100%', 'margin-top': '10px'}">     
+                    </div>
+                </div>
+                <div class="offset-4" style="margin-top:10px;">
+                    <p-dropdown [options]="options" #selectedOption2 placeholder="Select a Option" optionLabel="name" [showClear]="true" [style]="{'width': '350px'}" ></p-dropdown>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <input type="text" placeholder="Soru 3" pInputText #soru3 [style]="{'width': '100%', 'margin-top': '10px'}"> 
+            </div>
+            
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" placeholder="A)" pInputText #cevap31 [style]="{'width': '100%', 'margin-top': '10px'}"> 
+                    </div>
+    
+                    <div class="col-md-6">
+                        <input type="text" placeholder="B)" pInputText #cevap32 [style]="{'width': '100%', 'margin-top': '10px'}">     
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" placeholder="C)" pInputText #cevap33 [style]="{'width': '100%', 'margin-top': '10px'}"> 
+                    </div>
+    
+                    <div class="col-md-6">
+                        <input type="text" placeholder="D)" pInputText #cevap34 [style]="{'width': '100%', 'margin-top': '10px'}">     
+                    </div>
+                </div>
+                <div class="offset-4" style="margin-top:10px;">
+                    <p-dropdown [options]="options" #selectedOption3 placeholder="Select a Option" optionLabel="name" [showClear]="true" [style]="{'width': '350px'}" ></p-dropdown>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <input type="text" placeholder="Soru 4" pInputText #soru4 [style]="{'width': '100%', 'margin-top': '10px'}"> 
+            </div>
+            
+            <div class="col-md-12">
+                <div class="row">
+
+                     <div class="col-md-6">
+                        <input type="text" placeholder="A)" pInputText #cevap41 [style]="{'width': '100%', 'margin-top': '10px'}">     
+                    </div>
+    
+                    <div class="col-md-6">
+                        <input type="text" placeholder="B)" pInputText #cevap42 [style]="{'width': '100%', 'margin-top': '10px'}">     
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" placeholder="C)" pInputText #cevap43 [style]="{'width': '100%', 'margin-top': '10px'}"> 
+                    </div>
+    
+                    <div class="col-md-6">
+                        <input type="text" placeholder="D)" pInputText #cevap44 [style]="{'width': '100%', 'margin-top': '10px'}">     
+                    </div>
+                </div>
+                <div class="offset-4" style="margin-top:10px;">
+                    <p-dropdown [options]="options" #selectedOption4 placeholder="Select a Option" optionLabel="name" [showClear]="true" [style]="{'width': '350px'}" ></p-dropdown>
+                </div>
+            </div>       
+        <div class="offset-8">
+            <button pButton pRipple type="button" label="SINAVI OLUŞTUR" class="p-button-success" [style]="{'width': '350px'}" 
+            (click)="SinavOlustur(selectedOption1.value,selectedOption2.value,selectedOption3.value,selectedOption4.value,soru1.value,soru2.value,soru3.value,soru4.value,cevap11.value,cevap12.value,cevap13.value,cevap14.value,cevap21.value,cevap22.value,cevap23.value,cevap24.value,cevap31.value,cevap32.value,cevap33.value,cevap34.value,cevap41.value,cevap42.value,cevap43.value,cevap44.value)"></button>
+        </div>
+
+        <p-toast [style]="{marginTop: '80px'}" position="bottom-right"></p-toast>
+        
+    </div>
+    
+</div>
+
